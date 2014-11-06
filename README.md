@@ -42,7 +42,6 @@ http://www.cnblogs.com/tugenhua0707/p/4050072.html
 
 如何让本地的仓库和远程的仓库进行同步
 
-
 Microsoft Windows [版本 6.1.7601]
 版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
 
@@ -113,7 +112,96 @@ To https://github.com/sunfu103/php.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 
+D:\github\php>ls
+test  test.txt
+
+D:\github\php>git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       test/
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\github\php>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+D:\github\php>git add test
+
+D:\github\php>git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   test/test1.txt
+#       new file:   test/test2.txt
+#
+
+D:\github\php>git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   test/test1.txt
+#       new file:   test/test2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       test/temp/
+
+D:\github\php>git add .
+
+D:\github\php>git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   test/temp/temp1.txt
+#       new file:   test/test1.txt
+#       new file:   test/test2.txt
+#
+
+D:\github\php>git commit -m "second commit"
+[master 3b8f661] second commit
+ 0 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test/temp/temp1.txt
+ create mode 100644 test/test1.txt
+ create mode 100644 test/test2.txt
+
+D:\github\php>git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+
+D:\github\php>git log
+commit 3b8f6614ad4e5c0ab5afe87643fa72b71d52daf2
+Author: sunfu103 <sunfu103@163.com>
+Date:   Thu Nov 6 21:28:09 2014 +0800
+
+    second commit
+
+commit cdaa78d4fcd24aea0b9e91c0ea3432acefd217a1
+Author: unknown <sunfu@.(none)>
+Date:   Thu Nov 6 21:09:05 2014 +0800
+
+    first commit
+
+D:\github\php>git push origin master
+Username:
+Password:
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 380 bytes, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/sunfu103/php.git
+   cdaa78d..3b8f661  master -> master
+
 D:\github\php>
+
 
 
 
