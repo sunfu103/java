@@ -38,6 +38,11 @@ http://www.cnblogs.com/igrl/archive/2010/09/17/1829358.html
 http://www.cnblogs.com/tugenhua0707/p/4050072.html
 
 
+git config --global http.proxy proxy.tencent.com:8080    在公司的话需要使用这个代理哦
+
+
+https://wiki.freeswitch.org/wiki/Git_Tips   git代理的设置参考这个网站
+
 
 
 如何让本地的仓库和远程的仓库进行同步
