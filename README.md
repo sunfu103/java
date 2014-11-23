@@ -29,6 +29,9 @@ git config --global http.proxy=proxy.tencent.com:8080
 
 git push https://sunfu103@github.com/sunfu103/php.git
 
+git config --global http.sslcainfo "E:\Development\Git\bin\curl-ca-bundle.crt"
+git config --system http.sslcainfo "E:\Development\Git\bin\curl-ca-bundle.crt"
+
 git config --global http.sslcainfo "D:\Program Files (x86)\Git\bin\curl-ca-bundle.crt"
 
 git config --global http.sslCAInfo "D:\Program Files (x86)\Git\bin\curl-ca-bundle.crt"
